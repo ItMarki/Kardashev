@@ -10,9 +10,9 @@ var gameState = {
 	wood : "g"
   },
   resourcenames : {
-	energy : "energy",
-	bits : "information",
-	wood : "wood"
+	energy : "能量",
+	bits : "資訊",
+	wood : "木材"
   },
   allocated : {
 	land : {
@@ -43,8 +43,8 @@ var gameState = {
   },
   research_tree : {
 	tool : {
-	  name : 'Tool',
-	  desc : '+ 25 % hunting power',
+	  name : '工具',
+	  desc : '+ 25 % 狩獵力量',
 	  cost : {bits: 1e6 },
 	  onResearch : function() {
 		gameState.buildings['hunter'].genmod.energy *= 1.25;
@@ -54,8 +54,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	herbs : {
-	  name : 'Herbs',
-	  desc : '+ 50 % shaman knowledge',
+	  name : '香草',
+	  desc : '+ 50 % 巫師知識',
 	  cost : {bits: 1e6 },
 	  onResearch : function() {
 		gameState.buildings['shaman'].genmod.bits*= 1.5;
@@ -64,8 +64,8 @@ var gameState = {
 	  prereq : 0
 	},
 	pigments : {
-	  name : 'Pigments',
-	  desc : '+ 50 % shaman knowledge',
+	  name : '顏料',
+	  desc : '+ 50 % 巫師知識',
 	  cost : {bits : 1.5e6 },
 	  onResearch : function() {
 		gameState.buildings['shaman'].genmod.bits*= 1.5;
@@ -74,8 +74,8 @@ var gameState = {
 	  prereq : 0
 	},
 	petroglyphs : {
-	  name : 'Petroglyphs',
-	  desc : '+ 100 % shaman knowledge',
+	  name : '岩刻',
+	  desc : '+ 100 % 巫師知識',
 	  cost : {bits : 2.5e6 },
 	  onResearch : function() {
 		gameState.buildings['shaman'].genmod.bits *= 2;
@@ -84,8 +84,8 @@ var gameState = {
 	  prereq : 0
 	},
 	animalspirit : {
-	  name : 'Animal spirits',
-	  desc : '- 25 % shaman energy consumption',
+	  name : '動物靈魂',
+	  desc : '- 25 % 巫師能量費用',
 	  cost : {bits : 5.0e6},
 	  onResearch : function() {
 		gameState.buildings['shaman'].genmod.energy *= .75;
@@ -94,8 +94,8 @@ var gameState = {
 	  prereq : 0
 	},
 	rituals : {
-	  name : 'Rituals',
-	  desc  : '+ 100 % hunter knowledge',
+	  name : '儀式',
+	  desc  : '+ 100 % 狩獵者知識',
 	  cost : {bits : 1.0e7},
 	  onResearch : function() {
 		gameState.buildings['hunter'].genmod.bits *= 1.1;
@@ -104,8 +104,8 @@ var gameState = {
 	  prereq : 0
 	},
 	fire : {
-	  name : 'Fire',
-	  desc : '+ 25 % hunting power',
+	  name : '火',
+	  desc : '+ 25 % 狩獵力量',
 	  cost : {bits: 1.5e7},
 	  onResearch : function() {
 		gameState.buildings['hunter'].genmod.energy *= 1.25;
