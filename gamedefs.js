@@ -382,8 +382,8 @@ var gameState = {
 	  alpha : 1.2
 	},
 	atlatl : {
-	  name : 'Atlatl',
-	  desc : '+ 5 % hunting power',
+	  name : '投槍器',
+	  desc : '+ 5 % 狩獵力量',
 	  cost : { energy: 100, bits: 0},
 	  onUpgrade : function () {
 		gameState.buildings['hunter'].genmod.energy*= 1.05;
@@ -391,8 +391,8 @@ var gameState = {
 	  alpha : 1.5,
 	},
 	harpoons : {
-	  name : 'Harpoons',
-	  desc : '+ 15 % manual fishing power',
+	  name : '魚叉',
+	  desc : '+ 15 % 手動狩獵力量',
 	  cost : {energy: 6000, bits: 0},
 	  onUpgrade : function() {
 		gameState.activities['fish'].genmod.energy *= 1.15;
@@ -400,8 +400,8 @@ var gameState = {
 	  alpha : 1.5
 	},
 	granary : {
-	  name : 'Granaries',
-	  desc : '+ 20 % manual farming power',
+	  name : '穀倉',
+	  desc : '+ 20 % 手動狩獵力量',
 	  cost : {energy: 60000, bits: 0},
 	  onUpgrade : function() {
 		gameState.activities['farming'].genmod.energy *= 1.20;
@@ -409,8 +409,8 @@ var gameState = {
 	  alpha : 1.5
 	},
 	smiths : {
-	  name : 'Smiths',
-	  desc : '+ 5 % mill power',
+	  name : '鐵匠',
+	  desc : '+ 5 % 碾粉機力量',
 	  cost : {energy: 70000, bits: 0},
 	  onUpgrade : function() {
 		gameState.buildings['mill'].genmod.energy *= 1.05;
@@ -418,8 +418,8 @@ var gameState = {
 	  alpha : 1.15
 	},
 	books : {
-	  name : 'Books',
-	  desc : '+ 5 % monastery knowledge',
+	  name : '書本',
+	  desc : '+ 5 % 僧院知識',
 	  cost : {energy : 80000},
 	  onUpgrade : function() {
 		gameState.buildings['monastery'].genmod.bits *= 1.05;
@@ -427,8 +427,8 @@ var gameState = {
 	  alpha : 1.15
 	},
 	factory : {
-	  name : 'Factories',
-	  desc : '+ 5 % steam power',
+	  name : '工廠',
+	  desc : '+ 5 % 蒸汽力量',
 	  cost : {energy: 10000000},
 	  onUpgrade : function() {
 		gameState.buildings['steam'].genmod.energy *= 1.05;
@@ -436,8 +436,8 @@ var gameState = {
 	  alpha : 1.15
 	},
 	mines : {
-	  name : 'Mines',
-	  desc : '+ 5 % coal plant power',
+	  name : '礦場',
+	  desc : '+ 5 % 煤炭發電廠力量',
 	  cost : {energy: 10000000},
 	  onUpgrade : function() {
 		gameState.buildings['coal_plant'].genmod.energy *= 1.05;
@@ -447,7 +447,7 @@ var gameState = {
   },
   buildings : {
 	hunter : {
-	  name : 'Hunters',
+	  name : '狩獵者',
 	  cost : {energy: 5},
 	  alpha : 1.04,
 	  gen : {
@@ -456,7 +456,7 @@ var gameState = {
 	  },
 	},
 	shaman : {
-	  name : 'Shamans',
+	  name : '巫師',
 	  cost : {energy : 100},
 	  alpha : 1.05,
 	  gen : {
@@ -465,7 +465,7 @@ var gameState = {
 	  },
 	},
 	fisher : {
-	  name : 'Fishers',
+	  name : '漁民',
 	  cost : {energy: 750},
 	  alpha : 1.05,
 	  gen : {
@@ -474,7 +474,7 @@ var gameState = {
 	  }
 	},
 	farm : {
-	  name : 'Farms',
+	  name : '農場',
 	  cost : {energy: 15000},
 	  alpha : 1.07,
 	  gen : {
@@ -482,7 +482,7 @@ var gameState = {
 	  }
 	},
 	temple : {
-	  name : 'Temple',
+	  name : '神殿',
 	  cost : {energy: 1e5},
 	  alpha : 1.06,
 	  gen : {
@@ -491,7 +491,7 @@ var gameState = {
 	  }
 	},
 	monastery : {
-	  name : 'Monastery',
+	  name : '僧院',
 	  cost : {energy: 5e5},
 	  alpha : 1.06,
 	  gen : {
@@ -500,7 +500,7 @@ var gameState = {
 	  }
 	},
 	university : {
-	  name : 'University',
+	  name : '大學',
 	  cost : {energy: 1e6},
 	  alpha : 1.1,
 	  gen : {
@@ -509,7 +509,7 @@ var gameState = {
 	  }
 	},
 	mill : {
-	  name : 'Mills',
+	  name : '碾粉機',
 	  cost : {energy: 50000},
 	  alpha : 1.07,
 	  gen : {
@@ -517,7 +517,7 @@ var gameState = {
 	  }
 	},
 	steam : {
-	  name : 'Steam machines',
+	  name : '蒸汽機',
 	  cost :  {energy: 1000000},
 	  alpha : 1.05,
 	  gen : {
@@ -525,7 +525,7 @@ var gameState = {
 	  }
 	},
 	coal_plant : {
-	  name : 'Coal plants',
+	  name : '煤炭發電廠',
 	  cost :  {energy: 1000000000},
 	  alpha : 1.05,
 	  gen : {
@@ -533,7 +533,7 @@ var gameState = {
 	  }
 	},
 	fission_plant : {
-	  name : 'Nuclear fission plants',
+	  name : '核裂變發電廠',
 	  cost :  {energy: 5000000000},
 	  alpha : 1.05,
 	  gen : {
@@ -541,7 +541,7 @@ var gameState = {
 	  }
 	},
 	fusion_plant : {
-	  name : 'Nuclear fusion plants',
+	  name : '核聚變發電廠',
 	  cost :  {energy: 10000000000},
 	  alpha : 1.05,
 	  gen : {
