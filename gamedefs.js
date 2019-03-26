@@ -85,7 +85,7 @@ var gameState = {
 	},
 	animalspirit : {
 	  name : '動物靈魂',
-	  desc : '- 25 % 巫師能量費用',
+	  desc : '- 25 % 巫師能量消費',
 	  cost : {bits : 5.0e6},
 	  onResearch : function() {
 		gameState.buildings['shaman'].genmod.energy *= .75;
@@ -114,8 +114,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	spear : {
-	  name : 'Spear',
-	  desc : '+ 50 % hunting power, unlocks atlatl',
+	  name : '長槍',
+	  desc : '+ 50 % 狩獵力量，解鎖投槍器',
 	  cost : {bits: 2.0e7},
 	  onResearch : function() {
 		gameState.buildings['hunter'].genmod.energy *= 1.5;
@@ -125,8 +125,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	fishing : {
-	  name : 'Fishing',
-	  desc : 'unlocks fishermen',
+	  name : '釣魚',
+	  desc : '解鎖漁民',
 	  cost : {bits: 1.0e8},
 	  onResearch : function () {
 		unlock_activity('fish');
@@ -137,8 +137,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	boat : {
-	  name : 'Boats',
-	  desc : '+ 50 % fishing power',
+	  name : '船',
+	  desc : '+ 50 % 釣魚力量',
 	  cost : { bits: 1.2e8},
 	  onResearch : function () {
 		gameState.buildings['fisher'].genmod.energy *= 1.5;
@@ -147,8 +147,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	bow : {
-	  name : 'Bow',
-	  desc : '+ 100 % hunting power',
+	  name : '弓',
+	  desc : '+ 100 % 狩獵力量',
 	  cost : { bits: 1.0e8},
 	  onResearch : function() {
 		gameState.buildings['hunter'].genmod.energy *= 2.;
@@ -157,8 +157,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	farm : {
-	  name : 'Farming',
-	  desc : 'unlocks farms',
+	  name : '種植',
+	  desc : '解鎖農場',
 	  cost : { bits: 5.0e8},
 	  onResearch : function() {
 		unlock_building("farm");
@@ -169,8 +169,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	astrology : {
-	  name : 'Astrology',
-	  desc : 'write horoscopes, unlocks stargazing',
+	  name : '占星術',
+	  desc : '寫星相，解鎖觀星',
 	  cost : { bits: 5.0e8},
 	  onResearch : function() {
 		unlock_activity('stargaze');
@@ -179,8 +179,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	religion : {
-	  name : 'Religion',
-	  desc : 'Behold! The sacred texts! Unlocks temples',
+	  name : '宗教',
+	  desc : '看看！神聖的文字！解鎖神殿',
 	  cost : { bits : 6.0e8},
 	  onResearch : function() {
 		unlock_building("temple");
@@ -189,8 +189,8 @@ var gameState = {
 	  prereq : 0
 	},
 	writing : {
-	  name : 'Writing',
-	  desc : '+ 100 % temple knowledge, - 50 % temple energy consumption, unlocks books',
+	  name : '書寫',
+	  desc : '+ 100 % 神殿知識， - 50 % 神殿能量消費temple energy consumption, unlocks books',
 	  cost : { bits : 5e8 },
 	  onResearch : function() {
 		gameState.buildings['temple'].genmod.bits *= 2;
