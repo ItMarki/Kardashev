@@ -334,7 +334,7 @@ function updateStats()
 				d.innerHTML = "";
 				for (resource in gameState.resources) {
 					if (res.cost[resource]) {
-						d.innerHTML += formatUnit(res.cost[resource], gameState.units[resource]) + " of " + gameState.resourcenames[resource] + " ";
+						d.innerHTML += formatUnit(res.cost[resource], gameState.units[resource]) + gameState.resourcenames[resource] + " ";
 					}
 				}
 			}
@@ -352,7 +352,7 @@ function updateStats()
 		d.innerHTML = "";
 		for (resource in gameState.resources) {
 			if (res[resource]) {
-				d.innerHTML += formatUnit(res[resource] * res.genmod[resource], gameState.units[resource])+ " of " + gameState.resourcenames[resource] + " ";
+				d.innerHTML += formatUnit(res[resource] * res.genmod[resource], gameState.units[resource]) + gameState.resourcenames[resource] + " ";
 			}
 		}
 	}
@@ -363,7 +363,7 @@ function updateStats()
 		d.innerHTML = "";
 		for (resource in gameState.resources) {
 			if (res.gen[resource]) {
-				d.innerHTML += formatUnit(res.gen[resource] * res.genmod[resource], gameState.units[resource])+ " of " + gameState.resourcenames[resource] + " ";
+				d.innerHTML += formatUnit(res.gen[resource] * res.genmod[resource], gameState.units[resource]) + gameState.resourcenames[resource] + " ";
 			}
 		}
 	}
