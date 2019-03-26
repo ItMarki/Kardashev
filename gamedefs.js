@@ -190,7 +190,7 @@ var gameState = {
 	},
 	writing : {
 	  name : '書寫',
-	  desc : '+ 100 % 神殿知識， - 50 % 神殿能量消費temple energy consumption, unlocks books',
+	  desc : '+ 100 % 神殿知識， - 50 % 神殿能量消費，解鎖書本',
 	  cost : { bits : 5e8 },
 	  onResearch : function() {
 		gameState.buildings['temple'].genmod.bits *= 2;
@@ -201,8 +201,8 @@ var gameState = {
 	  prereq : 0,
 	},
 	theology : {
-	  name : 'Theology',
-	  desc : 'unlocks monasteries',
+	  name : '神學',
+	  desc : '解鎖僧院',
 	  cost : { bits : 7.0e8},
 	  onResearch : function() {
 		unlock_building("monastery");
@@ -211,8 +211,8 @@ var gameState = {
 	  prereq : 0
 	},
 	university : {
-	  name : 'University',
-	  desc : 'unlocks universities',
+	  name : '大學',
+	  desc : '解鎖大學',
 	  cost : { bits : 2.0e9},
 	  onResearch : function() {
 		unlock_building("university");
@@ -221,8 +221,8 @@ var gameState = {
 	  prereq : 0
 	},
 	scientificmethod : {
-	  name : 'Scientific Method',
-	  desc : 'university knowledge x10',
+	  name : '科學方法',
+	  desc : '大學知識 x10',
 	  cost : {bits : 1e10},
 	  onResearch : function() {
 		gameState.buildings['university'].genmod.bits *= 10;
@@ -231,8 +231,8 @@ var gameState = {
 	  prereq : 0
 	},
 	plough : {
-	  name : 'Plough',
-	  desc : '+ 50 % farming power',
+	  name : '犁',
+	  desc : '+ 50 % 種植力量',
 	  cost : { energy: 0, bits: 5.5e8},
 	  onResearch : function() {
 		gameState.buildings['farm'].genmod.energy*= 1.5;
@@ -241,8 +241,8 @@ var gameState = {
 	  prereq_of : []
 	},
 	husbandry : {
-	  name : 'Husbandry',
-	  desc : '+ 150 % farming power',
+	  name : '養殖',
+	  desc : '+ 150 % 種植力量',
 	  cost : { energy: 0, bits: 6.0e8},
 	  onResearch : function() {
 		gameState.buildings['farm'].genmod.energy*= 2.5;
@@ -251,8 +251,8 @@ var gameState = {
 	  prereq_of : ['yoke', 'horses', 'oxen']
 	},
 	yoke : {
-	  name : 'Yoke',
-	  desc : '+ 50 % farming power',
+	  name : '軛',
+	  desc : '+ 50 % 種植力量',
 	  cost : { energy: 0, bits : 6.5e8},
 	  onResearch : function() {
 		gameState.buildings['farm'].genmod.energy*= 1.5;
@@ -261,8 +261,8 @@ var gameState = {
 	  prereq_of : []
 	},
 	mills : {
-	  name : 'Mill',
-	  desc : 'unlocks mills, + 100 % farming power',
+	  name : '碾磨廠',
+	  desc : '解鎖碾磨廠， + 100 % 種植力量',
 	  cost : { energy: 0, bits : 7.0e8},
 	  onResearch : function() {
 		gameState.buildings['farm'].genmod.energy *= 2;
@@ -272,8 +272,8 @@ var gameState = {
 	  prereq_of : ['metallurgy']
 	},
 	horses : {
-	  name : 'Horses',
-	  desc : '+ 50 % mill power',
+	  name : '馬',
+	  desc : '+ 50 % 碾磨廠力量',
 	  cost : { energy: 0, bits : 7.5e8},
 	  onResearch : function()  {
 		gameState.buildings['mill'].genmod.energy *= 1.5;
@@ -282,8 +282,8 @@ var gameState = {
 	  prereq_of : []
 	},
 	oxen : {
-	  name : 'Oxen',
-	  desc : '+ 100 % mill power, + 500 % farming power',
+	  name : '公牛',
+	  desc : '+ 100 % 碾磨廠力量， + 500 % 種植力量',
 	  cost : { energy: 0, bits : 8.0e8},
 	  onResearch : function() {
 		gameState.buildings['mill'].genmod.energy *= 2;
@@ -293,8 +293,8 @@ var gameState = {
 	  prereq_of : []
 	},
 	astronomy : {
-	  name : 'Astronomy',
-	  desc : 'proper understanding of the movement of the stars and planets',
+	  name : '天文學',
+	  desc : '恆星與行星的動作的理解',
 	  cost : {bits : 9e9},
 	  onResearch : function() {
 	  },
@@ -302,8 +302,8 @@ var gameState = {
 	  prereq_of : []
 	},
 	metallurgy : {
-	  name : 'Metallurgy',
-	  desc : 'unlocks smiths',
+	  name : '治金學',
+	  desc : '解鎖鐵匠',
 	  cost : { energy: 0, bits : 8.5e9},
 	  onResearch : function() {
 		unlock_upgrade('smiths');
@@ -312,8 +312,8 @@ var gameState = {
 	  prereq_of : ['alchemy']
 	},
 	alchemy : {
-	  name : 'Alchemy',
-	  desc : 'try to turn lead into gold',
+	  name : '鍊金術',
+	  desc : '嘗試將鉛變成金',
 	  cost : {bits : 9e9},
 	  onResearch : function() {
 	  },
@@ -321,8 +321,8 @@ var gameState = {
 	  prereq_of : ['chemistry']
 	},
 	chemistry : {
-	  name : 'Chemistry',
-	  desc : 'a better knowledge of matter',
+	  name : '化學',
+	  desc : '對於物質的更好知識',
 	  cost : {bits : 1e10},
 	  onResearch : function() {
 
@@ -331,8 +331,8 @@ var gameState = {
 	  prereq_of : ['steammachine']
 	},
 	steammachine : {
-	  name : 'Steam machine',
-	  desc : 'unlocks steam machines',
+	  name : '蒸汽機',
+	  desc : '解鎖蒸汽機',
 	  cost : { energy: 0, bits: 5.0e10},
 	  onResearch : function() {
 		unlock_building('steam');
