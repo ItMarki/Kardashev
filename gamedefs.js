@@ -341,8 +341,8 @@ var gameState = {
 	  prereq_of : ['electricity', 'industry']
 	},
 	industry : {
-	  name : 'Industry',
-	  desc : '+ 200 % steam power, unlocks factory upgrade',
+	  name : '工業',
+	  desc : '+ 200 % 整齊力量，解鎖工廠升級',
 	  cost : { energy: 0, bits: 6.5e10},
 	  onResearch : function() {
 		unlock_upgrade('factory');
@@ -351,8 +351,8 @@ var gameState = {
 	  prereq_of : ['electricity', 'mining']
 	},
 	electricity : {
-	  name : 'Electricity',
-	  desc : '+ 100 % steam power',
+	  name : '電力',
+	  desc : '+ 100 % 蒸汽力量',
 	  cost : { energy: 0, bits: 9e10} ,
 	  onResearch : function() {
 		unlock_building('coal_plant');
@@ -361,8 +361,8 @@ var gameState = {
 	  prereq_of : []
 	},
 	mining : {
-	  name : 'Mining',
-	  desc : '+ 100 % coal plant power, unlocks mines upgrade',
+	  name : '採礦',
+	  desc : '+ 100 % 煤炭發電廠力量，解鎖礦場升級',
 	  cost : {energy: 0, bits: 7e10},
 	  onResearch : function() {
 		unlock_upgrade('mines');
@@ -373,8 +373,8 @@ var gameState = {
   },
   upgrades : {
 	tools : {
-	  name : 'Tools',
-	  desc : '+ 10 % manual hunting power',
+	  name : '工具',
+	  desc : '+ 10 % 手動狩獵力量',
 	  cost : {energy: 500, bits: 0},
 	  onUpgrade : function() {
 		gameState.activities['hunt'].genmod.energy *= 1.1;
